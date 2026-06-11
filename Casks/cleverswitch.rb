@@ -7,7 +7,7 @@ cask "cleverswitch" do
   desc "Menubar switcher for multiple AI CLI accounts (Claude Code & Codex)"
   homepage "https://github.com/Clevermation/cleverswitch"
 
-  depends_on macos: ":sonoma"
+  depends_on macos: :sonoma
 
   app "CleverSwitch.app"
 
