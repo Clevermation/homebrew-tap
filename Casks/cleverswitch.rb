@@ -1,6 +1,6 @@
 cask "cleverswitch" do
-  version "0.1.0"
-  sha256 "c6a4b00fbbfe13166d37ee75b76283cf207cbcfaf8887508d84799d588be96e2"
+  version "0.1.1"
+  sha256 "6dc77199ceaa7dca946386d7250911686a14cdc56f1e334148a584c7ce974b52"
 
   url "https://github.com/Clevermation/cleverswitch/releases/download/v#{version}/CleverSwitch-#{version}.zip"
   name "CleverSwitch"
