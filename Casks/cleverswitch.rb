@@ -1,6 +1,6 @@
 cask "cleverswitch" do
-  version "0.1.2"
-  sha256 "2938d4b39c912fe8569a1e92cfb8aa75e2386ecf555cc50d728f86fee70d36a8"
+  version "0.1.3"
+  sha256 "4a3014ebbbd339c07b5f2c741fcaef65acdedd5d9905df58937eaca6c0c3f42a"
 
   url "https://github.com/Clevermation/cleverswitch/releases/download/v#{version}/CleverSwitch-#{version}.zip"
   name "CleverSwitch"
@@ -18,8 +18,16 @@ cask "cleverswitch" do
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/CleverSwitch.app"]
   end
 
+  uninstall quit: "com.clevermation.cleverswitch"
+
   zap trash: [
     "~/Library/Application Support/CleverSwitch",
     "~/Library/Logs/CleverSwitch.log",
+    "~/Library/Logs/CleverSwitch.old.log",
   ]
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 end
