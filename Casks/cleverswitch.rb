@@ -7,6 +7,11 @@ cask "cleverswitch" do
   desc "Menubar switcher for multiple AI CLI accounts (Claude Code & Codex)"
   homepage "https://github.com/Clevermation/cleverswitch"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: :sonoma
 
   app "CleverSwitch.app"
@@ -25,9 +30,4 @@ cask "cleverswitch" do
     "~/Library/Logs/CleverSwitch.log",
     "~/Library/Logs/CleverSwitch.old.log",
   ]
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 end
